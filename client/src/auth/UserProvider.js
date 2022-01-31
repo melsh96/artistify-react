@@ -18,7 +18,7 @@ const UserProvider = ({ children }) => {
 			.then(({ data }) => {
 				setIsLoggedIn(true);
 				console.log("logged");
-				setCurrentUser(data);
+				setCurrentUser(data.currentUser);
 				setIsLoading(false);
 				if (clbk) {
 					clbk();
